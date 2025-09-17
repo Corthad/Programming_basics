@@ -28,6 +28,7 @@ int main()
     x2 = numeric_limits<bool>::max();
     cout << "Type = " << typeid(a1).name() << ". size = " << sizeof(a1) << ". Value from " << x1 << " to " << x2 << "\n";
 
+    cout << "\n";
     x1 = numeric_limits<short>::min();
     x2 = numeric_limits<short>::max();
     cout << "Type = " << typeid(b1).name() << ". size = " << sizeof(b1) << ". Value from " << x1 << " to " << x2 << "\n";
@@ -47,6 +48,7 @@ int main()
     x1 = numeric_limits<long>::min();
     x2 = numeric_limits<long>::max();
     cout << "Type = " << typeid(b5).name() << ". size = " << sizeof(b5) << ". Value from " << x1 << " to " << x2 << "\n";
+
     x1 = numeric_limits<unsigned long>::min();
     x2 = numeric_limits<unsigned long>::max();
     cout << "Type = " << typeid(b6).name() << ". size = " << sizeof(b6) << ". Value from " << x1 << " to " << x2 << "\n";
@@ -59,7 +61,7 @@ int main()
     x2 = numeric_limits<unsigned long long>::max();
     cout << "Type = " << typeid(b8).name() << ". size = " << sizeof(b8) << ". Value from " << x1 << " to " << x2 << "\n";
 
-
+    cout << "\n";
     x1 = numeric_limits<signed char>::min();
     x2 = numeric_limits<signed char>::max();
     cout << "Type = " << typeid(c1).name() << ". size = " << sizeof(c1) << ". Value from " << x1 << " to " << x2 << "\n";
@@ -68,6 +70,7 @@ int main()
     x2 = numeric_limits<unsigned char>::max();
     cout << "Type = " << typeid(c2).name() << ". size = " << sizeof(c2) << ". Value from " << x1 << " to " << x2 << "\n";
 
+    cout << "\n";
     x1 = numeric_limits<float>::min();
     x2 = numeric_limits<float>::max();
     cout << "Type = " << typeid(d1).name() << ". size = " << sizeof(d1) << ". Value from " << x1 << " to " << x2 << "\n";
@@ -80,6 +83,7 @@ int main()
     x2 = numeric_limits<long double>::max();
     cout << "Type = " << typeid(d3).name() << ". size = " << sizeof(d3) << ". Value from " << x1 << " to " << x2 << "\n";
 
+    cout << "\n";
     cin >> y1 >> y2;
     y0 = y1 + y2;
     cout << "y1 + y2 = " << y0 << " Type = " << typeid(y0).name() << "\n";
