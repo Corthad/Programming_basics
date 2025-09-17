@@ -1,5 +1,6 @@
 ﻿#include <iostream>
-#include <math.h>
+#include <typeinfo>
+#include <limits>
 
 int main()
 {
@@ -7,88 +8,93 @@ int main()
 
     short b1;
     unsigned short b2;
-    int b3, y0, y1, y2; 
+    int b3, x0, y0, y1, y2; 
     unsigned int b4;
     long b5;
     unsigned long b6;
-    long long b7, x0, x1, x2;
+    long long b7;
     unsigned long long b8;
 
     signed char c1;
     unsigned char c2;
 
     float d1;
-    double d2, z1, z2, z3;
+    double d2, x1, x2, z0, z1, z2;
     long double d3;
 
-    std::cout << "size bool = " << sizeof(a1) << ". Value = 2\n";
+    using namespace std;
 
-    x0 = pow(2, sizeof(b1)*8 - 1);
-    x1 = x0 * (-1);
-    x2 = x0 - 1;
-    std::cout << "size short = " << sizeof(b1) << ". Value from " << x1 << " to " << x2 << "\n";
+    x1 = numeric_limits<bool>::min();
+    x2 = numeric_limits<bool>::max();
+    cout << "Type = " << typeid(a1).name() << ". size = " << sizeof(a1) << ". Value from " << x1 << " to " << x2 << "\n";
 
-    x0 = pow(2, sizeof(b2)*8);
-    x1 = x0 * (-1);
-    x2 = x0 - 1;
-    std::cout << "size unsigned short = " << sizeof(b2) << ". Value from " << 0 << " to " << x2 << "\n";
+    x1 = numeric_limits<short>::min();
+    x2 = numeric_limits<short>::max();
+    cout << "Type = " << typeid(b1).name() << ". size = " << sizeof(b1) << ". Value from " << x1 << " to " << x2 << "\n";
 
-    x0 = pow(2, sizeof(b3)*8 - 1);
-    x1 = x0 * (-1);
-    x2 = x0 - 1;
-    std::cout << "size int = " << sizeof(b3) << ". Value from " << x1 << " to " << x2 << "\n";
+    x1 = numeric_limits<unsigned short>::min();
+    x2 = numeric_limits<unsigned short>::max();
+    cout << "Type = " << typeid(b2).name() << ". size = " << sizeof(b2) << ". Value from " << x1 << " to " << x2 << "\n";
 
-    x0 = pow(2, sizeof(b4)*8);
-    x1 = x0 * (-1);
-    x2 = x0 - 1;
-    std::cout << "size unsigned int = " << sizeof(b4) << ". Value from " << 0 << " to " << x2 << "\n";
+    x1 = numeric_limits<int>::min();
+    x2 = numeric_limits<int>::max();
+    cout << "Type = " << typeid(b3).name() << ". size = " << sizeof(b3) << ". Value from " << x1 << " to " << x2 << "\n";
 
-    x0 = sizeof(b6)*8 - 1;
-    x2 = x1 = x0;
-    std::cout << "size long = " << sizeof(b5) << ". Value from (-1) * 2^" << x1 << " to 2^" << x2 << "\n";
+    x1 = numeric_limits<unsigned int>::min();
+    x2 = numeric_limits<unsigned int>::max();
+    cout << "Type = " << typeid(b4).name() << ". size = " << sizeof(b4) << ". Value from " << x1 << " to " << x2 << "\n";
 
-    x0 = sizeof(b6)*8;
-    x2 = x1 = x0;
-    std::cout << "size unsigned long = " << sizeof(b6) << ". Value from " << 0 << " to 2^" << x2 << "\n";
+    x1 = numeric_limits<long>::min();
+    x2 = numeric_limits<long>::max();
+    cout << "Type = " << typeid(b5).name() << ". size = " << sizeof(b5) << ". Value from " << x1 << " to " << x2 << "\n";
+    x1 = numeric_limits<unsigned long>::min();
+    x2 = numeric_limits<unsigned long>::max();
+    cout << "Type = " << typeid(b6).name() << ". size = " << sizeof(b6) << ". Value from " << x1 << " to " << x2 << "\n";
 
-    x0 = sizeof(b7)*8 - 1;
-    x2 = x1 = x0;
-    std::cout << "size long long = " << sizeof(b7) << ". Value from (-1) * 2^" << x1 << " to 2^" << x2 << "\n";
+    x1 = numeric_limits<long long>::min();
+    x2 = numeric_limits<long long>::max();
+    cout << "Type = " << typeid(b7).name() << ". size = " << sizeof(b7) << ". Value from " << x1 << " to " << x2 << "\n";
 
-    x0 = sizeof(b8)*8;
-    x2 = x1 = x0;
-    std::cout << "size unsigned long long = " << sizeof(b8) << ". Value from " << 0 << " to 2^" << x2 << "\n";
-
-
-    x0 = pow(2, sizeof(c1)*8 - 1);
-    x1 = x0 * (-1);
-    x2 = x0 - 1;    
-    std::cout << "size signed char = " << sizeof(c1) << ". Value from " << x1 << " to " << x2 << "\n";
-
-    x0 = pow(2, sizeof(c2)*8);
-    x1 = x0 * (-1);
-    x2 = x0 - 1;
-    std::cout << "size unsined char = " << sizeof(c2) << ". Value from " << 0 << " to " << x2 << "\n";
-
-    std::cout << "size float = " << sizeof(d1) << "\n";
-    std::cout << "size double = " << sizeof(d2) << "\n";
-    std::cout << "size long double = " << sizeof(d3) << "\n";
+    x1 = numeric_limits<unsigned long long>::min();
+    x2 = numeric_limits<unsigned long long>::max();
+    cout << "Type = " << typeid(b8).name() << ". size = " << sizeof(b8) << ". Value from " << x1 << " to " << x2 << "\n";
 
 
-    std::cin >> y1 >> y2;
+    x1 = numeric_limits<signed char>::min();
+    x2 = numeric_limits<signed char>::max();
+    cout << "Type = " << typeid(c1).name() << ". size = " << sizeof(c1) << ". Value from " << x1 << " to " << x2 << "\n";
+
+    x1 = numeric_limits<unsigned char>::min();
+    x2 = numeric_limits<unsigned char>::max();
+    cout << "Type = " << typeid(c2).name() << ". size = " << sizeof(c2) << ". Value from " << x1 << " to " << x2 << "\n";
+
+    x1 = numeric_limits<float>::min();
+    x2 = numeric_limits<float>::max();
+    cout << "Type = " << typeid(d1).name() << ". size = " << sizeof(d1) << ". Value from " << x1 << " to " << x2 << "\n";
+
+    x1 = numeric_limits<double>::min();
+    x2 = numeric_limits<double>::max();
+    cout << "Type = " << typeid(d2).name() << ". size = " << sizeof(d2) << ". Value from " << x1 << " to " << x2 << "\n";
+
+    x1 = numeric_limits<long double>::min();
+    x2 = numeric_limits<long double>::max();
+    cout << "Type = " << typeid(d3).name() << ". size = " << sizeof(d3) << ". Value from " << x1 << " to " << x2 << "\n";
+
+    cin >> y1 >> y2;
     y0 = y1 + y2;
-    std::cout << "y1 + y2 = " << y0 << " Type = int\n";
+    cout << "y1 + y2 = " << y0 << " Type = " << typeid(y0).name() << "\n";
     y0 = y1 - y2;
-    std::cout << "y1 + y2 = " << y0 << " Type = int\n";
+    cout << "y1 + y2 = " << y0 << " Type = " << typeid(y0).name() << "\n";
     y0 = y1 * y2;
-    std::cout << "y1 + y2 = " << y0 << " Type = int\n";
+    cout << "y1 + y2 = " << y0 << " Type = " << typeid(y0).name() << "\n";
     y0 = y1 / y2;
-    std::cout << "y1 + y2 = " << y0 << " Type = int\n";
+    cout << "y1 + y2 = " << y0 << " Type = " << typeid(y0).name() << "\n";
     y0 = y1 % y2;
-    std::cout << "y1 % y2 = " << y0 << " Type = int\n";
-    
-    std::cin >> z1 >> z2;
-    z3 = z1 / z2;
-    std::cout << "z1 / z2 = " << z3 << " Type = double\n";
+    cout << "y1 % y2 = " << y0 << " Type = " << typeid(y0).name() << "\n";
+
+    z1 = y1;
+    z2 = y2;
+    z0 = z1 / z2;
+    cout << "z1 / z2 = " << z0 << " Type = " << typeid(z0).name() << "\n";
 
 }
