@@ -94,10 +94,12 @@ int main()
     cout << "y1 / y2 = " << y0 << " Type = " << typeid(y0).name() << "\n";
     y0 = y1 % y2;
     cout << "y1 % y2 = " << y0 << " Type = " << typeid(y0).name() << "\n";
-
+    
     z1 = y1;
     z2 = y2;
     z0 = z1 / z2;
     cout << "z1 / z2 = " << z0 << " Type = " << typeid(z0).name() << "\n";
-
+    double z10;
+    z10 = 10 + 10.5;
+    cout << "z10 = " << z10 << " Type = " << typeid(z10).name() << endl;
 }
